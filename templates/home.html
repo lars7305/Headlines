@@ -17,16 +17,16 @@
     <h2>Currency</h2>
    <form>
         from: <select name="currency_from">
-            <option value="{{currency_from}}" selected>{{currency_from}}</option>
+            <!--<option value="{{currency_from}}" selected>{{currency_from}}</option>-->
             {% for currency in currencies %}
-                <option value="{{currency}}">{{currency}}</option>
+               <option value="{{currency}}" {{'selected="selected"' if currency_from==currency}}>{{currency}}</option>
             {% endfor %}
         </select>
 
         to: <select name="currency_to">
-            <option value="{{currency_from}}" selected>{{currency_to}}</option>
+            <!--<option value="{{currency_from}}" selected>{{currency_to}}</option> -->
             {% for currency in currencies %}
-                <option value="{{currency}}">{{currency}}</option>
+                <option value="{{currency}}" {{'selected="selected"' if currency_to==currency}}>{{currency}}</option>
             {% endfor %}
         </select>
         <input type="submit" value="Submit">
