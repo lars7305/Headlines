@@ -53,9 +53,8 @@ def get_news(query):
 
 def get_weather(query):
     query = query.replace(" ", "+")
-    print type(query)
-    anfrage = "http://api.openweathermap.org/data/2.5/weather?q=" + query + "&units=metric&APPID=841bc14a9faedaf4b13017e890cebd5f"
-    print type(anfrage)
+    anfrage = "http://api.openweathermap.org/data/2.5/weather?q=" \
+              + query + "&units=metric&APPID=841bc14a9faedaf4b13017e890cebd5f"
     try:
         response = urllib2.urlopen(anfrage)
     except:
